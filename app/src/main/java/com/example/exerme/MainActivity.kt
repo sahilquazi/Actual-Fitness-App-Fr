@@ -8,6 +8,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        println("can you hit a rich flex for me?")
+        println("Sahil and Nguyen and Alex")
     }
 }
