@@ -8,16 +8,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+println("21 can you do something for me")
+        println("ghosttttttttttttttt")
+        println("Sahil and Nguyen and Alex")
+println("ong i hate track")
 
-
-
-
-
-
-
-        println("Can you do something for me?")
-
-        println("sahils toe")
-        println("I still see your shadows in my room")
     }
 }
