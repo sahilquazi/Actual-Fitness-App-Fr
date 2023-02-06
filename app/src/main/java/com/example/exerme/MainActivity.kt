@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        //peter page
+        //nguyen page
 
     }
 }
