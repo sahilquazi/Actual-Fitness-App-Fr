@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Exerme</string>
+    <string name="button_text">Calendar</string>
 </resources>
