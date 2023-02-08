@@ -13,15 +13,12 @@ class MainActivity : AppCompatActivity() {
         //sahil page
 
 
-val secondActButton = findViewById<Button>(R.id.rahButton)
-        secondActButton.setOnClickListener {
-            val Intent = Intent(this, quizpagesahil::class.java)
-       startActivity(Intent)
+
+
+        val buttonClick = findViewById<Button>(R.id.rahButton)
+        buttonClick.setOnClickListener {
+            setContentView(R.layout.quizpage)
         }
-   
-
-
-
 
         //alex page
 
