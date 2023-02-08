@@ -2,6 +2,7 @@ package com.example.exerme
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -11,7 +12,11 @@ class MainActivity : AppCompatActivity() {
         //sahil page
 
 
-
+val secondActButton = findViewById<Button>(R.id.rahButton)
+        secondActButton.setOnClickListener {
+            val Intent = Intent(packageContent: this,quizpagesahil::class.kt)
+       startActivity(Intent)
+        }
    
 
 
