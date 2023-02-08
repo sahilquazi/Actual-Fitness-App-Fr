@@ -12,8 +12,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        //peter page
-
+   
 
 
 
