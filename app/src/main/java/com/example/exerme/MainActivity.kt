@@ -1,5 +1,6 @@
 package com.example.exerme
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -14,7 +15,7 @@ class MainActivity : AppCompatActivity() {
 
 val secondActButton = findViewById<Button>(R.id.rahButton)
         secondActButton.setOnClickListener {
-            val Intent = Intent(packageContent: this,quizpagesahil::class.kt)
+            val Intent = Intent(this, quizpagesahil::class.java)
        startActivity(Intent)
         }
    
