@@ -1,28 +1,17 @@
 package com.example.exerme
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 
-class MainActivity : AppCompatActivity() {
+class DashboardPeterAndAlex : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+    }
 
-        //sahil page
-
-
-
-   
-
-
-
-
-        //alex page
-
-
-
-
-        //nguyen page
+    fun buttonClick(view: View?){
+        println("Button Clicked!")
 
     }
 }
