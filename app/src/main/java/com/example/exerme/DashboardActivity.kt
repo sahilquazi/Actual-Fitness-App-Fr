@@ -1,6 +1,6 @@
 package com.example.exerme
 
-
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
@@ -10,11 +10,15 @@ class DashboardActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dashboard)
 
+        val calendarButton = findViewById<Button>(R.id.calendarButton)
 
-        val buttonClick = findViewById<Button>(R.id.rahButton)
-        buttonClick.setOnClickListener {
-            setContentView(R.layout.quizpage)
-
+        calendarButton.setOnClickListener {
+            startActivity(
+                Intent(
+                    this,
+                    CalendarActivity::class.java
+                )
+            )
         }
     }
 }
