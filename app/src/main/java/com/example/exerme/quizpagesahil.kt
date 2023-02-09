@@ -13,8 +13,5 @@ class quizpagesahil : AppCompatActivity() {
 
 
 
-
-
-        }
     }
 }
