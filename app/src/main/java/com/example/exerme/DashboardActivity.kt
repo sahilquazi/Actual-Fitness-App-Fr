@@ -9,14 +9,14 @@ class DashboardActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dashboard)
 
-        val buttonClick2 = findViewById<Button>(R.id.calendarButton)
-        buttonClick2.setOnClickListener {
-            setContentView(R.layout.activity_calendar)
-        }
-
         val buttonClick = findViewById<Button>(R.id.rahButton)
         buttonClick.setOnClickListener {
             setContentView(R.layout.quizpage)
+        }
+
+        val buttonClick2 = findViewById<Button>(R.id.calendarButton)
+        buttonClick2.setOnClickListener {
+            setContentView(R.layout.activity_calendar)
         }
 
     }
