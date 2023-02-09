@@ -15,9 +15,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        val buttonClick = findViewById<Button>(R.id.rahButton)
-        buttonClick.setOnClickListener {
-            setContentView(R.layout.quizpage)
+
         }
 
         //alex page
@@ -28,4 +26,3 @@ class MainActivity : AppCompatActivity() {
         //nguyen page
 
     }
-}
