@@ -25,6 +25,7 @@ class CalendarActivity : AppCompatActivity() {
             editor.apply()
         } else {
             Toast.makeText(this, "you already worked out", Toast.LENGTH_SHORT).show()
+            
         }
     }
 }
