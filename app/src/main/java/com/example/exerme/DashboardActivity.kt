@@ -5,9 +5,13 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
 class DashboardActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dashboard)
+
+        val dashboardToolbar = null
+        setSupportActionBar(dashboardToolbar)
 
         val buttonClick = findViewById<Button>(R.id.rahButton)
         buttonClick.setOnClickListener {
@@ -18,6 +22,7 @@ class DashboardActivity : AppCompatActivity() {
         buttonClick2.setOnClickListener {
             setContentView(R.layout.activity_calendar)
         }
+
 
     }
 }
