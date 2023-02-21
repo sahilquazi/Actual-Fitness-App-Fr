@@ -14,14 +14,13 @@ class CalendarActivity : AppCompatActivity() {
         val year = calendar[Calendar.YEAR]
         val month = calendar[Calendar.MONTH]
         val day = calendar[Calendar.DAY_OF_MONTH]
-        val today = year.toString() + "" + month + "" + day
+        val todayString = year.toString() + "" + month + "" + day
         val preferences = getSharedPreferences("PREFERENCES", 0)
-        val currentDay = preferences.getBoolean(today, false)
-
+        val currentDay = preferences.getBoolean(todayString, false)
         if (!currentDay) {
-            Toast.makeText(this, "go work out now", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "go work out", Toast.LENGTH_SHORT).show()
             val editor = preferences.edit()
-            editor.putBoolean(today, true)
+            editor.putBoolean(todayString, true)
             editor.apply()
         } else {
             Toast.makeText(this, "you already worked out", Toast.LENGTH_SHORT).show()
