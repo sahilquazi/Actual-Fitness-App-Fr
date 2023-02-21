@@ -9,16 +9,6 @@ import androidx.appcompat.app.AppCompatActivity
 class DashboardActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        var prefs = PreferenceManager
-            .getDefaultSharedPreferences(this)
-        if (!prefs.getBoolean("firstTime", false)) {
-            val editor = prefs.edit()
-            editor.putBoolean("firstTime", true)
-            editor.commit()
-        }
-        if (prefs == true) {
-            setContentView(R.layout.quizpage)
-        }
 
             super.onCreate(savedInstanceState)
             setContentView(R.layout.activity_dashboard)
