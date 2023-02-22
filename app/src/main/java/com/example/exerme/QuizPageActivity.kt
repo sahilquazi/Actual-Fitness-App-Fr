@@ -23,7 +23,7 @@ class QuizPageActivity : AppCompatActivity() {
         }
 
         private fun goToMain() {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, DashboardActivity::class.java)
             startActivity(intent)
             finish() // close this activity since we don't want it in back stack
         }
