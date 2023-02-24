@@ -12,12 +12,6 @@ class DashboardActivity : AppCompatActivity() {
             super.onCreate(savedInstanceState)
             setContentView(R.layout.activity_dashboard)
 
-            val buttonQuiz = findViewById<Button>(R.id.btnQuiz)
-            buttonQuiz.setOnClickListener {
-                val intent = Intent(this, QuizPageActivity::class.java)
-                startActivity(intent)
-            }
-
             val buttonCalendar = findViewById<Button>(R.id.calendarButton)
             buttonCalendar.setOnClickListener {
                 val intent = Intent(this, CalendarActivity::class.java)
