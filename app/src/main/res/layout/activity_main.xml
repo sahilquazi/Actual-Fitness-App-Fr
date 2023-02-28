@@ -1,50 +1,112 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_width="409dp"
+    android:layout_height="729dp"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp"
+    android:fillViewport="true">
 
-    <Button
-        android:id="@+id/SignUpButton"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="268dp"
-        android:text="@string/signup"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/edtTextName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="164dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints=""
-        tools:ignore="LabelFor" />
+        <Button
+            android:id="@+id/SignUpButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="@string/signup"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/switch1" />
 
-    <EditText
-        android:id="@+id/edtTextEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
-        android:layout_marginBottom="60dp"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtTextName"
-        app:layout_constraintVertical_bias="0.712"
-        android:autofillHints=""
-        tools:ignore="LabelFor" />
+        <EditText
+            android:id="@+id/edtTextName"
+            android:layout_width="260dp"
+            android:layout_height="66dp"
+            android:layout_marginTop="80dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="@+id/Welcome"
+            app:layout_constraintStart_toStartOf="@+id/Welcome"
+            app:layout_constraintTop_toBottomOf="@+id/Welcome"
+            tools:ignore="LabelFor"
+            tools:text="Username" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <EditText
+            android:id="@+id/edtTextEmail"
+            android:layout_width="267dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="68dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            app:layout_constraintEnd_toEndOf="@+id/edtTextName"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="@+id/edtTextName"
+            app:layout_constraintTop_toBottomOf="@+id/edtTextName"
+            tools:ignore="LabelFor"
+            tools:text="Email" />
+
+        <TextView
+            android:id="@+id/DoesWorkout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:background="#742AF7"
+            android:text="@string/DoesWorkout"
+            android:textColor="#0E0E0D"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="@+id/edtTextEmail"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="@+id/edtTextEmail"
+            app:layout_constraintTop_toBottomOf="@+id/edtTextEmail" />
+
+        <TextView
+            android:id="@+id/Welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="#FAF5F5"
+            android:backgroundTint="#742AF8"
+            android:text="@string/Welcome"
+            android:textColor="#0E0E0D"
+            android:textSize="40sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="221dp"
+            android:layout_height="59dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/WorkoutNo"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="@+id/DoesWorkout"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="@+id/DoesWorkout"
+            app:layout_constraintTop_toBottomOf="@+id/WorkoutYes" />
+
+        <Switch
+            android:id="@+id/WorkoutYes"
+            android:layout_width="227dp"
+            android:layout_height="54dp"
+            android:layout_marginTop="44dp"
+            android:text="@string/WorkoutYes"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="@+id/DoesWorkout"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="@+id/DoesWorkout"
+            app:layout_constraintTop_toBottomOf="@+id/DoesWorkout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
