@@ -6,8 +6,10 @@
     <string name="btnBack">Return To Home</string>
     <string name="signup">Sign Up</string>
     <string name="Welcome">Welcome To Exerme!</string>
-    <string name="DoesWorkout">Do you workout?</string>
-    <string name="WorkoutYes">Yes</string>
-    <string name="WorkoutNo">No</string>
-    <string name="LengthOfExercise">How long are your workouts?</string>
+    <string name="DoesWorkout">Rate your experience at workouts</string>
+    <string name="NewWorkout">Low</string>
+    <string name="VetWorkout">High</string>
+    <string name="LengthOfExercise">How long can you workout?</string>
+    <string name="FrequencyOfExercise">How many times a week do you want to workout out?</string>
+
 </resources>

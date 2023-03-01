@@ -9,30 +9,56 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:context=".MainActivity">
+        android:layout_height="727dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:context=".MainActivity"
+        tools:layout_editor_absoluteY="1dp">
+
+        <SeekBar
+            android:id="@+id/surveyQuestion4"
+            android:layout_width="353dp"
+            android:layout_height="35dp"
+            app:layout_constraintEnd_toEndOf="@+id/surveyQuestionWorkoutLength"
+            app:layout_constraintStart_toStartOf="@+id/surveyQuestionWorkoutLength"
+            app:layout_constraintTop_toBottomOf="@+id/surveyQuestionWorkoutLength" />
+
+        <TextView
+            android:id="@+id/surveyQuestionWorkoutLength"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:background="#742AF7"
+            android:text="@string/FrequencyOfExercise"
+            android:textColor="#0E0E0D"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/surveyQuestion2" />
 
         <Button
             android:id="@+id/SignUpButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
+            android:layout_marginTop="199dp"
             android:text="@string/signup"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/switch1" />
+            app:layout_constraintTop_toBottomOf="@+id/SurveyQuestionWorkoutLength" />
 
         <EditText
             android:id="@+id/edtTextName"
             android:layout_width="260dp"
             android:layout_height="66dp"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="36dp"
             android:autofillHints=""
             android:ems="10"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="@+id/Welcome"
+            app:layout_constraintHorizontal_bias="0.473"
             app:layout_constraintStart_toStartOf="@+id/Welcome"
             app:layout_constraintTop_toBottomOf="@+id/Welcome"
             tools:ignore="LabelFor"
@@ -42,30 +68,16 @@
             android:id="@+id/edtTextEmail"
             android:layout_width="267dp"
             android:layout_height="72dp"
-            android:layout_marginTop="68dp"
+            android:layout_marginTop="32dp"
             android:autofillHints=""
             android:ems="10"
             android:inputType="textEmailAddress"
-            app:layout_constraintEnd_toEndOf="@+id/edtTextName"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="@+id/edtTextName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/edtTextName"
             tools:ignore="LabelFor"
             tools:text="Email" />
-
-        <TextView
-            android:id="@+id/DoesWorkout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="48dp"
-            android:background="#742AF7"
-            android:text="@string/DoesWorkout"
-            android:textColor="#0E0E0D"
-            android:textSize="30sp"
-            app:layout_constraintEnd_toEndOf="@+id/edtTextEmail"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="@+id/edtTextEmail"
-            app:layout_constraintTop_toBottomOf="@+id/edtTextEmail" />
 
         <TextView
             android:id="@+id/Welcome"
@@ -78,33 +90,60 @@
             android:textColor="#0E0E0D"
             android:textSize="40sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintHorizontal_bias="0.314"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Switch
-            android:id="@+id/switch1"
-            android:layout_width="221dp"
-            android:layout_height="59dp"
-            android:layout_marginTop="32dp"
-            android:text="@string/WorkoutNo"
-            android:textSize="30sp"
-            app:layout_constraintEnd_toEndOf="@+id/DoesWorkout"
-            app:layout_constraintHorizontal_bias="0.496"
-            app:layout_constraintStart_toStartOf="@+id/DoesWorkout"
-            app:layout_constraintTop_toBottomOf="@+id/WorkoutYes" />
+        <TextView
+            android:id="@+id/SurveyQuestionWorkoutLVL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:background="#742AF7"
+            android:text="@string/DoesWorkout"
+            android:textColor="#0E0E0D"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="@+id/edtTextEmail"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="@+id/edtTextEmail"
+            app:layout_constraintTop_toBottomOf="@+id/edtTextEmail" />
 
-        <Switch
-            android:id="@+id/WorkoutYes"
-            android:layout_width="227dp"
-            android:layout_height="54dp"
-            android:layout_marginTop="44dp"
-            android:text="@string/WorkoutYes"
-            android:textSize="30sp"
-            app:layout_constraintEnd_toEndOf="@+id/DoesWorkout"
-            app:layout_constraintHorizontal_bias="0.496"
-            app:layout_constraintStart_toStartOf="@+id/DoesWorkout"
-            app:layout_constraintTop_toBottomOf="@+id/DoesWorkout" />
+        <TextView
+            android:id="@+id/SurveyQuestionWorkoutLength"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="#742AF7"
+            android:text="@string/LengthOfExercise"
+            android:textColor="#0E0E0D"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="@+id/SurveyQuestion1"
+            app:layout_constraintStart_toStartOf="@+id/SurveyQuestion1"
+            app:layout_constraintTop_toBottomOf="@+id/SurveyQuestion1" />
+
+        <SeekBar
+            android:id="@+id/SurveyQuestion1"
+            android:layout_width="353dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="@+id/SurveyQuestionWorkoutLVL"
+            app:layout_constraintStart_toStartOf="@+id/SurveyQuestionWorkoutLVL"
+            app:layout_constraintTop_toBottomOf="@+id/SurveyQuestionWorkoutLVL" />
+
+        <SeekBar
+            android:id="@+id/surveyQuestion2"
+            android:layout_width="353dp"
+            android:layout_height="35dp"
+            app:layout_constraintEnd_toEndOf="@+id/SurveyQuestionWorkoutLength"
+            app:layout_constraintStart_toStartOf="@+id/SurveyQuestionWorkoutLength"
+            app:layout_constraintTop_toBottomOf="@+id/SurveyQuestionWorkoutLength" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="20dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
