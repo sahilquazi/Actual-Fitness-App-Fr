@@ -5,11 +5,13 @@
     <string name="textview">TextView</string>
     <string name="btnBack">Return To Home</string>
     <string name="signup">Sign Up</string>
+    <string name= "btnNotification">Set Reminder</string>
     <string name="Welcome">Welcome To Exerme!</string>
     <string name="DoesWorkout">Rate your experience at workouts</string>
     <string name="NewWorkout">Low</string>
     <string name="VetWorkout">High</string>
     <string name="LengthOfExercise">How long can you workout?</string>
     <string name="FrequencyOfExercise">How many times a week do you want to workout out?</string>
+    <string name="set_reminder">Set Reminder</string>
 
 </resources>
