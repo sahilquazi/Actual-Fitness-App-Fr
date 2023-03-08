@@ -11,12 +11,15 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.NotificationCompat
+import androidx.core.app.NotificationCompat.*
 import java.util.*
+
+
+
 
 class CalendarActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
 
         val backButton = findViewById<Button>(R.id.btnQuiz)
         backButton.setOnClickListener {
@@ -39,7 +42,9 @@ class CalendarActivity : AppCompatActivity() {
         .setSmallIcon(R.drawable.notification_icon)
         .setContentTitle("My notification")
         .setContentText("Lets goo your streak is $StreakSaverToday" )
-        .setStyle(NotificationCompat.BigTextStyle()
+        .setStyle(
+            BigTextStyle()
             .bigText("Click this to continue your streak!"))
-        .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+        .setPriority(PRIORITY_DEFAULT)
+
 }
