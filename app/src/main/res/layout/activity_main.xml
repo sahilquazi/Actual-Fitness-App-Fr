@@ -1,152 +1,144 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="409dp"
-    android:layout_height="729dp"
-    android:fillViewport="true"
-    android:scrollbarStyle="insideOverlay"
+    android:id="@+id/ConstraintLayout"
+    style="@style/ConstraintLayout"
     tools:layout_editor_absoluteX="1dp"
     tools:layout_editor_absoluteY="1dp">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
+        android:id="@+id/scrollView5"
         android:layout_width="match_parent"
-        android:layout_height="727dp"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/welcome2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="#FAF5F5"
+                android:backgroundTint="#6CFF6E"
+                android:text="@string/Welcome"
+                android:textColor="#0E0E0D"
+                android:textSize="40sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.558"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/edtTextName"
+                android:layout_width="match_parent"
+                android:layout_height="66dp"
+                android:layout_marginTop="24dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="Username"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="@+id/Welcome"
+                app:layout_constraintHorizontal_bias="0.478"
+                app:layout_constraintStart_toStartOf="@+id/Welcome"
+                app:layout_constraintTop_toBottomOf="@+id/Welcome"
+                tools:ignore="LabelFor"
+                tools:text="Username" />
+
+            <EditText
+                android:id="@+id/edtTextEmail"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:layout_marginTop="12dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtTextName"
+                tools:ignore="LabelFor"
+                tools:text="Email" />
+
+            <TextView
+                android:id="@+id/surveyQuestionWorkoutLength"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:background="#6CFF6E"
+                android:text="@string/FrequencyOfExercise"
+                android:textColor="#0E0E0D"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/surveyQuestion2" />
+
+            <SeekBar
+                android:id="@+id/surveyQuestion2"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                app:layout_constraintEnd_toEndOf="@+id/surveyQuestionWorkoutLength"
+                app:layout_constraintStart_toStartOf="@+id/surveyQuestionWorkoutLength"
+                app:layout_constraintTop_toBottomOf="@+id/surveyQuestionWorkoutLength" />
+
+            <TextView
+                android:id="@+id/surveyQuestionWorkoutLVL2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:background="#6CFF6E"
+                android:text="@string/DoesWorkout"
+                android:textColor="#0E0E0D"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toEndOf="@+id/edtTextEmail"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="@+id/edtTextEmail"
+                app:layout_constraintTop_toBottomOf="@+id/edtTextEmail" />
+
+            <SeekBar
+                android:id="@+id/surveyQuestion4"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintEnd_toEndOf="@+id/SurveyQuestionWorkoutLVL"
+                app:layout_constraintStart_toStartOf="@+id/SurveyQuestionWorkoutLVL"
+                app:layout_constraintTop_toBottomOf="@+id/SurveyQuestionWorkoutLVL" />
+
+            <TextView
+                android:id="@+id/surveyQuestionWorkoutLength4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="#6CFF6E"
+                android:text="@string/LengthOfExercise"
+                android:textColor="#0E0E0D"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toEndOf="@+id/SurveyQuestion1"
+                app:layout_constraintStart_toStartOf="@+id/SurveyQuestion1"
+                app:layout_constraintTop_toBottomOf="@+id/SurveyQuestion1" />
+
+            <SeekBar
+                android:id="@+id/surveyQuestion6"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                app:layout_constraintEnd_toEndOf="@+id/SurveyQuestionWorkoutLength"
+                app:layout_constraintStart_toStartOf="@+id/SurveyQuestionWorkoutLength"
+                app:layout_constraintTop_toBottomOf="@+id/SurveyQuestionWorkoutLength" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/signUpButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/signup"
+        app:layout_constraintBottom_toBottomOf="@+id/scrollView5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:context=".MainActivity"
-        tools:layout_editor_absoluteY="1dp">
-
-        <SeekBar
-            android:id="@+id/surveyQuestion4"
-            android:layout_width="353dp"
-            android:layout_height="35dp"
-            app:layout_constraintEnd_toEndOf="@+id/surveyQuestionWorkoutLength"
-            app:layout_constraintStart_toStartOf="@+id/surveyQuestionWorkoutLength"
-            app:layout_constraintTop_toBottomOf="@+id/surveyQuestionWorkoutLength" />
-
-        <TextView
-            android:id="@+id/surveyQuestionWorkoutLength"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="44dp"
-            android:background="#742AF7"
-            android:text="@string/FrequencyOfExercise"
-            android:textColor="#0E0E0D"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/surveyQuestion2" />
-
-        <Button
-            android:id="@+id/SignUpButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="199dp"
-            android:text="@string/signup"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/SurveyQuestionWorkoutLength" />
-
-        <EditText
-            android:id="@+id/edtTextName"
-            android:layout_width="260dp"
-            android:layout_height="66dp"
-            android:layout_marginTop="36dp"
-            android:autofillHints=""
-            android:ems="10"
-            android:inputType="textPersonName"
-            app:layout_constraintEnd_toEndOf="@+id/Welcome"
-            app:layout_constraintHorizontal_bias="0.473"
-            app:layout_constraintStart_toStartOf="@+id/Welcome"
-            app:layout_constraintTop_toBottomOf="@+id/Welcome"
-            tools:ignore="LabelFor"
-            tools:text="Username" />
-
-        <EditText
-            android:id="@+id/edtTextEmail"
-            android:layout_width="267dp"
-            android:layout_height="72dp"
-            android:layout_marginTop="32dp"
-            android:autofillHints=""
-            android:ems="10"
-            android:inputType="textEmailAddress"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edtTextName"
-            tools:ignore="LabelFor"
-            tools:text="Email" />
-
-        <TextView
-            android:id="@+id/Welcome"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:background="#FAF5F5"
-            android:backgroundTint="#742AF8"
-            android:text="@string/Welcome"
-            android:textColor="#0E0E0D"
-            android:textSize="40sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.314"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/SurveyQuestionWorkoutLVL"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="48dp"
-            android:background="#742AF7"
-            android:text="@string/DoesWorkout"
-            android:textColor="#0E0E0D"
-            android:textSize="25sp"
-            app:layout_constraintEnd_toEndOf="@+id/edtTextEmail"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="@+id/edtTextEmail"
-            app:layout_constraintTop_toBottomOf="@+id/edtTextEmail" />
-
-        <TextView
-            android:id="@+id/SurveyQuestionWorkoutLength"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:background="#742AF7"
-            android:text="@string/LengthOfExercise"
-            android:textColor="#0E0E0D"
-            android:textSize="25sp"
-            app:layout_constraintEnd_toEndOf="@+id/SurveyQuestion1"
-            app:layout_constraintStart_toStartOf="@+id/SurveyQuestion1"
-            app:layout_constraintTop_toBottomOf="@+id/SurveyQuestion1" />
-
-        <SeekBar
-            android:id="@+id/SurveyQuestion1"
-            android:layout_width="353dp"
-            android:layout_height="35dp"
-            android:layout_marginTop="24dp"
-            app:layout_constraintEnd_toEndOf="@+id/SurveyQuestionWorkoutLVL"
-            app:layout_constraintStart_toStartOf="@+id/SurveyQuestionWorkoutLVL"
-            app:layout_constraintTop_toBottomOf="@+id/SurveyQuestionWorkoutLVL" />
-
-        <SeekBar
-            android:id="@+id/surveyQuestion2"
-            android:layout_width="353dp"
-            android:layout_height="35dp"
-            app:layout_constraintEnd_toEndOf="@+id/SurveyQuestionWorkoutLength"
-            app:layout_constraintStart_toStartOf="@+id/SurveyQuestionWorkoutLength"
-            app:layout_constraintTop_toBottomOf="@+id/SurveyQuestionWorkoutLength" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_begin="20dp" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-</ScrollView>
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
