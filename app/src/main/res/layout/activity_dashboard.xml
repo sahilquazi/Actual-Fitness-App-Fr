@@ -25,43 +25,110 @@
                 android:layout_margin="5dp"
                 app:cardBackgroundColor="#FFFFFF"
                 app:cardCornerRadius="5dp"
-                app:cardElevation="5dp">
+                app:cardElevation="5dp"
+                tools:ignore="WebViewLayout">
 
-                <ImageView
-                    android:layout_width="1in"
-                    android:layout_height="1in"
-                    android:layout_margin="5dp"
-                    android:background="#FFFFFF"
-                    android:elevation="3dp"
-                    android:src="@drawable/pimg" />
+                <WebView
+                    android:layout_width="181dp"
+                    android:layout_height="179dp"
+                    tools:ignore="MissingConstraints" />
 
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_gravity="center"
                     android:paddingLeft="1.1in"
-                    android:text="@string/textview"
                     android:textSize="23sp"
                     android:textStyle="bold"
-                    android:textColor="#7CF095" />
-            </androidx.cardview.widget.CardView>
+                    android:layout_gravity="center"
+                    android:textColor="#7CF095"
+                    android:text="@string/textview"/>
+            </androidx.cardview.widget.CardView>  <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="5dp"
+            tools:ignore="WebViewLayout">
 
+            <WebView
+                android:layout_width="181dp"
+                android:layout_height="179dp"
+                tools:ignore="MissingConstraints" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="1.1in"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:textColor="#7CF095"
+                android:text="@string/textview"/>
+        </androidx.cardview.widget.CardView>  <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="5dp"
+            tools:ignore="WebViewLayout">
+
+            <WebView
+                android:layout_width="181dp"
+                android:layout_height="179dp"
+                tools:ignore="MissingConstraints" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="1.1in"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:textColor="#7CF095"
+                android:text="@string/textview"/>
+        </androidx.cardview.widget.CardView>  <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="5dp"
+            tools:ignore="WebViewLayout">
+
+            <WebView
+                android:layout_width="181dp"
+                android:layout_height="179dp"
+                tools:ignore="MissingConstraints" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="1.1in"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:textColor="#7CF095"
+                android:text="@string/textview"/>
+        </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 app:cardBackgroundColor="#FFFFFF"
                 app:cardCornerRadius="5dp"
-                app:cardElevation="5dp">
+                app:cardElevation="5dp"
+                tools:ignore="WebViewLayout">
 
-                <ImageView
-                    android:layout_width="1in"
-                    android:layout_height="1in"
-                    android:layout_margin="5dp"
-                    android:background="#FFFFFF"
-                    android:elevation="3dp"
-                    android:src="@drawable/pimg" />
+                <WebView
+                    android:layout_width="181dp"
+                    android:layout_height="179dp"
+                    tools:ignore="MissingConstraints" />
 
 
                 <TextView
@@ -80,151 +147,13 @@
                 android:layout_margin="5dp"
                 app:cardBackgroundColor="#FFFFFF"
                 app:cardCornerRadius="5dp"
-                app:cardElevation="5dp">
+                app:cardElevation="5dp"
+                tools:ignore="WebViewLayout">
 
-                <ImageView
-                    android:layout_width="1in"
-                    android:layout_height="1in"
-                    android:layout_margin="5dp"
-                    android:background="#FFFFFF"
-                    android:elevation="3dp"
-                    android:src="@drawable/pimg" />
-
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:paddingLeft="1.1in"
-                    android:textSize="23sp"
-                    android:textStyle="bold"
-                    android:layout_gravity="center"
-                    android:textColor="#7CF095"
-                    android:text="@string/textview"/>
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                app:cardBackgroundColor="#FFFFFF"
-                app:cardCornerRadius="5dp"
-                app:cardElevation="5dp">
-
-                <ImageView
-                    android:layout_width="1in"
-                    android:layout_height="1in"
-                    android:layout_margin="5dp"
-                    android:background="#FFFFFF"
-                    android:elevation="3dp"
-                    android:src="@drawable/pimg" />
-
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:paddingLeft="1.1in"
-                    android:textSize="23sp"
-                    android:textStyle="bold"
-                    android:layout_gravity="center"
-                    android:textColor="#7CF095"
-                    android:text="@string/textview"/>
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                app:cardBackgroundColor="#FFFFFF"
-                app:cardCornerRadius="5dp"
-                app:cardElevation="5dp">
-
-                <ImageView
-                    android:layout_width="1in"
-                    android:layout_height="1in"
-                    android:layout_margin="5dp"
-                    android:background="#FFFFFF"
-                    android:elevation="3dp"
-                    android:src="@drawable/pimg" />
-
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:paddingLeft="1.1in"
-                    android:textSize="23sp"
-                    android:textStyle="bold"
-                    android:layout_gravity="center"
-                    android:textColor="#7CF095"
-                    android:text="@string/textview"/>
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                app:cardBackgroundColor="#FFFFFF"
-                app:cardCornerRadius="5dp"
-                app:cardElevation="5dp">
-
-                <ImageView
-                    android:layout_width="1in"
-                    android:layout_height="1in"
-                    android:layout_margin="5dp"
-                    android:background="#FFFFFF"
-                    android:elevation="3dp"
-                    android:src="@drawable/pimg" />
-
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:paddingLeft="1.1in"
-                    android:textSize="23sp"
-                    android:textStyle="bold"
-                    android:layout_gravity="center"
-                    android:textColor="#7CF095"
-                    android:text="@string/textview"/>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                app:cardBackgroundColor="#FFFFFF"
-                app:cardCornerRadius="5dp"
-                app:cardElevation="5dp">
-
-                <ImageView
-                    android:layout_width="1in"
-                    android:layout_height="1in"
-                    android:layout_margin="5dp"
-                    android:background="#FFFFFF"
-                    android:elevation="3dp"
-                    android:src="@drawable/pimg" />
-
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:paddingLeft="1.1in"
-                    android:textSize="23sp"
-                    android:textStyle="bold"
-                    android:layout_gravity="center"
-                    android:textColor="#7CF095"
-                    android:text="@string/textview"/>
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                app:cardBackgroundColor="#FFFFFF"
-                app:cardCornerRadius="5dp"
-                app:cardElevation="5dp">
-
-                <ImageView
-                    android:layout_width="1in"
-                    android:layout_height="1in"
-                    android:layout_margin="5dp"
-                    android:background="#FFFFFF"
-                    android:elevation="3dp"
-                    android:src="@drawable/pimg" />
+                <WebView
+                    android:layout_width="181dp"
+                    android:layout_height="179dp"
+                    tools:ignore="MissingConstraints" />
 
 
                 <TextView
@@ -249,49 +178,6 @@
         app:layout_constraintBottom_toBottomOf="@+id/scrollView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-
-
-
-
-
-
-
-
-
-    <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:background="@color/colorPrimary"
-tools:context=".WebViewActivity">
-
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:id="@+id/youtube_player_view_layout"
-    android:layout_width="match_parent"
-    android:layout_height="0dp"
-    android:background="@android:color/black"
-    app:layout_constraintDimensionRatio="H,16:9"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent">
-
-    <WebView
-        android:id="@+id/webview_player_view"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
