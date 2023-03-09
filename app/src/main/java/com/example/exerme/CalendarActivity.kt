@@ -11,14 +11,13 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.exerme.databinding.ActivityCalendarBinding
-import androidx.core.app.NotificationCompat
-import androidx.core.app.NotificationCompat.*
 import java.util.*
 
 
-
 class CalendarActivity : AppCompatActivity() {
-    private lateinit var binding : ActivityCalendarBinding
+    private lateinit var binding: ActivityCalendarBinding
+    private val channelID = "1"
+    private val notificationId = 1
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCalendarBinding.inflate(layoutInflater)
@@ -41,17 +40,18 @@ class CalendarActivity : AppCompatActivity() {
         }
     }
 
-    private fun sendNotification() {
-        val intent = Intent(this, Notification:: class.java)
-        val pendingIntent = PendingIntent.getBroadcast(
-            this,
-            1,
-            intent,
-            PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT)
+    private fun createNotificationChannel() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val channelName = "Notification Channel"
+            val channelDesc = "Description"
+            val importance = NotificationManager.IMPORTANCE_DEFAULT
+            val channel = NotificationChannel(channelID, channelName, importance).apply {
+                description = channelDesc
+            }
 
-        val alarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
-        val time = getDate()
-        alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, time, pendingIntent)
+            val notificationManager = getSystemService(NOTIFICATION_SERVICE) as NotificationManager
+            notificationManager.createNotificationChannel(channel)
+        }
     }
 
     private fun getDate(): Long {
@@ -66,28 +66,12 @@ class CalendarActivity : AppCompatActivity() {
         return calendar.timeInMillis
     }
 
-    private fun createNotificationChannel() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            val channelName = "Notification Channel"
-            val channelDesc = "Description"
-            val importance = NotificationManager.IMPORTANCE_DEFAULT
-            val channel = NotificationChannel("channel", channelName, importance)
-            channel.description = channelDesc
+    private fun sendNotification() {
+        val intent = Intent(this, Notification::class.java)
+        val pendingIntent = PendingIntent.getBroadcast(this, notificationId, intent, PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT)
 
-            val notificationManager = getSystemService(NOTIFICATION_SERVICE) as NotificationManager
-            notificationManager.createNotificationChannel(channel)
-        }
+        val alarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
+        val time = getDate()
+        alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, time, pendingIntent)
     }
-
-    private var streakSaverToday = 0
-    private val channelID = "1"
-
-    var builder = NotificationCompat.Builder(this, channelID)
-        .setSmallIcon(R.drawable.notification_icon)
-        .setContentTitle("My notification")
-        .setContentText("Lets goo your streak is $streakSaverToday" )
-        .setStyle(
-            BigTextStyle()
-                .bigText("Click this to continue your streak!"))
-        .setPriority(PRIORITY_DEFAULT)
 }
