@@ -44,18 +44,8 @@ class DashboardActivity : AppCompatActivity() {
                     super.onCreate(savedInstanceState)
                     setContentView(R.layout.activity_dashboard)
 
-                    webView = findViewById(R.id.webview_player_view)
-                    webView.webViewClient = WebViewClient()
-                    webView.webChromeClient = CustomChromeClient() // Full-screen support
-                    val webSettings = webView.settings
-                    webSettings.javaScriptEnabled = true
-                    webSettings.allowFileAccess = true
-                    if (savedInstanceState == null) {
-                        webView.loadUrl("https://www.youtube.com/embed/YE7VzlLtp-4")
-                    }
-                }
 
-                private inner class CustomChromeClient : WebChromeClient() {
+                class CustomChromeClient : WebChromeClient() {
                     private var mCustomView: View? = null
                     private var mCustomViewCallback: CustomViewCallback? = null
                     private var mOriginalOrientation = 0
@@ -91,17 +81,17 @@ class DashboardActivity : AppCompatActivity() {
                         window.decorView.systemUiVisibility = 3846 or View.SYSTEM_UI_FLAG_LAYOUT_STABLE
                     }
                 }
-
-                override fun onSaveInstanceState(outState: Bundle) {
+                    fun onSaveInstanceState(outState: Bundle) {
                     super.onSaveInstanceState(outState)
                     webView.saveState(outState)
                 }
 
-                override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+                    fun onRestoreInstanceState(savedInstanceState: Bundle) {
                     super.onRestoreInstanceState(savedInstanceState)
                     webView.restoreState(savedInstanceState)
                 }
             }
         }
     }
+        }
 }
