@@ -6,6 +6,14 @@
     tools:layout_editor_absoluteX="1dp"
     tools:layout_editor_absoluteY="1dp">
 
+
+
+    <com.google.android.youtube.player.YouTubePlayerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ytPlayer"
+        app:layout_constraintTop_toTopOf="parent"/>
+
     <ScrollView
         android:id="@+id/scrollView5"
         android:layout_width="match_parent"

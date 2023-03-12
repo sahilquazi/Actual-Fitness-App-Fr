@@ -8,11 +8,9 @@ import android.os.Bundle
 import android.view.View
 import android.webkit.WebChromeClient
 import android.webkit.WebView
-import android.webkit.WebViewClient
 import android.widget.Button
 import android.widget.FrameLayout
 import androidx.appcompat.app.AppCompatActivity
-
 
 class DashboardActivity : AppCompatActivity() {
 
@@ -39,10 +37,6 @@ class DashboardActivity : AppCompatActivity() {
             class WebViewActivity : AppCompatActivity() {
 
                 private lateinit var webView: WebView
-
-                override fun onCreate(savedInstanceState: Bundle?) {
-                    super.onCreate(savedInstanceState)
-                    setContentView(R.layout.activity_dashboard)
 
 
                 class CustomChromeClient : WebChromeClient() {
@@ -94,4 +88,3 @@ class DashboardActivity : AppCompatActivity() {
         }
     }
         }
-}
