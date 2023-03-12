@@ -8,14 +8,6 @@
 
 
 
-    <com.google.android.youtube.player.YouTubePlayerView
-        android:id="@+id/youtube_player"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:ignore="MissingClass" />
-
-
-
 
     <ScrollView
         android:id="@+id/scrollView"
@@ -77,6 +69,16 @@
                 android:layout_gravity="center"
                 android:textColor="#7CF095"
                 android:text="@string/textview"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:paddingLeft="1.1in"
+                android:text="@string/textview"
+                android:textColor="#7CF095"
+                android:textSize="23sp"
+                android:textStyle="bold" />
         </androidx.cardview.widget.CardView>  <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -101,6 +103,7 @@
                 android:layout_gravity="center"
                 android:textColor="#7CF095"
                 android:text="@string/textview"/>
+
         </androidx.cardview.widget.CardView>  <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -110,10 +113,6 @@
             app:cardElevation="5dp"
             tools:ignore="WebViewLayout">
 
-            <WebView
-                android:layout_width="181dp"
-                android:layout_height="179dp"
-                tools:ignore="MissingConstraints" />
 
 
             <TextView
@@ -160,21 +159,38 @@
                 app:cardElevation="5dp"
                 tools:ignore="WebViewLayout">
 
-                <WebView
-                    android:layout_width="181dp"
-                    android:layout_height="179dp"
-                    tools:ignore="MissingConstraints" />
 
 
-                <TextView
+
+
+
+
+            <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/youtubeplayerId"
+                app:autoPlay="true"
+                app:showFullScreenButton="true"
+                app:videoId="nY9ZrI7frb8"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+
+
+
+
+                <Button
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:paddingLeft="1.1in"
-                    android:textSize="23sp"
-                    android:textStyle="bold"
-                    android:layout_gravity="center"
-                    android:textColor="#7CF095"
-                    android:text="@string/textview"/>
+                    android:layout_height="wrap_content"
+
+                    android:text="Play"
+                    />
+
+
             </androidx.cardview.widget.CardView>
 
         </LinearLayout>
