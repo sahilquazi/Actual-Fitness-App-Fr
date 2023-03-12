@@ -1,15 +1,9 @@
 package com.example.exerme
 
-import android.annotation.SuppressLint
 import android.content.Intent
-import android.graphics.Bitmap
-import android.graphics.BitmapFactory
+import android.net.Uri
 import android.os.Bundle
-import android.view.View
-import android.webkit.WebChromeClient
-import android.webkit.WebView
 import android.widget.Button
-import android.widget.FrameLayout
 import androidx.appcompat.app.AppCompatActivity
 
 class DashboardActivity : AppCompatActivity() {
@@ -22,69 +16,43 @@ class DashboardActivity : AppCompatActivity() {
         buttonCalendar.setOnClickListener {
             val intent = Intent(this, CalendarActivity::class.java)
             startActivity(intent)
-
-
-
-
-
-
-
-
-
-
-
-            @SuppressLint("SetJavaScriptEnabled")
-            class WebViewActivity : AppCompatActivity() {
-
-                private lateinit var webView: WebView
-
-
-                class CustomChromeClient : WebChromeClient() {
-                    private var mCustomView: View? = null
-                    private var mCustomViewCallback: CustomViewCallback? = null
-                    private var mOriginalOrientation = 0
-                    private var mOriginalSystemUiVisibility = 0
-                    override fun getDefaultVideoPoster(): Bitmap? {
-                        return if (mCustomView == null) {
-                            null
-                        } else BitmapFactory.decodeResource(applicationContext.resources, 2130837573)
-                    }
-
-                    override fun onHideCustomView() {
-                        (window.decorView as FrameLayout).removeView(mCustomView)
-                        mCustomView = null
-                        window.decorView.systemUiVisibility = mOriginalSystemUiVisibility
-                        requestedOrientation = mOriginalOrientation
-                        mCustomViewCallback!!.onCustomViewHidden()
-                        mCustomViewCallback = null
-                    }
-
-                    override fun onShowCustomView(
-                        paramView: View?,
-                        paramCustomViewCallback: CustomViewCallback?
-                    ) {
-                        if (mCustomView != null) {
-                            onHideCustomView()
-                            return
-                        }
-                        mCustomView = paramView
-                        mOriginalSystemUiVisibility = window.decorView.systemUiVisibility
-                        mOriginalOrientation = requestedOrientation
-                        mCustomViewCallback = paramCustomViewCallback
-                        (window.decorView as FrameLayout).addView(mCustomView, FrameLayout.LayoutParams(-1, -1))
-                        window.decorView.systemUiVisibility = 3846 or View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                    }
-                }
-                    override fun onSaveInstanceState(outState: Bundle) {
-                    super.onSaveInstanceState(outState)
-                    webView.saveState(outState)
-                }
-
-                    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
-                    super.onRestoreInstanceState(savedInstanceState)
-                    webView.restoreState(savedInstanceState)
-                }
-            }
         }
+
+
+
+
+
+        String videoUrl = "https://media.geeksforgeeks.org/wp-content/uploads/20201217192146/Screenrecorder-2020-12-17-19-17-36-828.mp4?_=1";
+
+
+            // Uri object to refer the
+            // resource from the videoUrl
+            Uri uri = Uri.parse(videoUrl);
+
+            // sets the resource from the
+            // videoUrl to the videoView
+            videoView.setVideoURI(uri);
+
+            // creating object of
+            // media controller class
+            MediaController mediaController = new MediaController(this);
+
+            // sets the anchor view
+            // anchor view for the videoView
+            mediaController.setAnchorView(videoView);
+
+            // sets the media player to the videoView
+            mediaController.setMediaPlayer(videoView);
+
+            // sets the media controller to the videoView
+            videoView.setMediaController(mediaController);
+
+            // starts the video
+            videoView.start();
+        }
+
+
+
+
     }
-        }
+}
