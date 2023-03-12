@@ -75,12 +75,12 @@ class DashboardActivity : AppCompatActivity() {
                         window.decorView.systemUiVisibility = 3846 or View.SYSTEM_UI_FLAG_LAYOUT_STABLE
                     }
                 }
-                    fun onSaveInstanceState(outState: Bundle) {
+                    override fun onSaveInstanceState(outState: Bundle) {
                     super.onSaveInstanceState(outState)
                     webView.saveState(outState)
                 }
 
-                    fun onRestoreInstanceState(savedInstanceState: Bundle) {
+                    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
                     super.onRestoreInstanceState(savedInstanceState)
                     webView.restoreState(savedInstanceState)
                 }
