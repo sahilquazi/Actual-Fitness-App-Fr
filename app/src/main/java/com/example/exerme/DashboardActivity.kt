@@ -1,12 +1,15 @@
 package com.example.exerme
 
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
+import android.provider.MediaStore.Video.Thumbnails.VIDEO_ID
 import android.widget.Button
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-
-class DashboardActivity : AppCompatActivity() {
+import com.google.android.youtube.player.YouTubeInitializationResult
+import com.google.android.youtube.player.YouTubePlayer
+import com.google.android.youtube.player.YouTubePlayerView
+class DashboardActivity : AppCompatActivity(), YouTubePlayer.OnInitializedListener{
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,40 +22,31 @@ class DashboardActivity : AppCompatActivity() {
         }
 
 
+        val playerView = findViewById<YouTubePlayerView>(R.id.youtube_player)
+        playerView.initialize(getString(R.string.AIzaSyABImPKz_yPwZKp65R8za4nKLMKpahntAI), this)
 
 
-
-        String videoUrl = "https://media.geeksforgeeks.org/wp-content/uploads/20201217192146/Screenrecorder-2020-12-17-19-17-36-828.mp4?_=1";
-
-
-            // Uri object to refer the
-            // resource from the videoUrl
-            Uri uri = Uri.parse(videoUrl);
-
-            // sets the resource from the
-            // videoUrl to the videoView
-            videoView.setVideoURI(uri);
-
-            // creating object of
-            // media controller class
-            MediaController mediaController = new MediaController(this);
-
-            // sets the anchor view
-            // anchor view for the videoView
-            mediaController.setAnchorView(videoView);
-
-            // sets the media player to the videoView
-            mediaController.setMediaPlayer(videoView);
-
-            // sets the media controller to the videoView
-            videoView.setMediaController(mediaController);
-
-            // starts the video
-            videoView.start();
+        override fun onInitializationSuccess(
+            provider: YouTubePlayer.Provider?,
+            player: YouTubePlayer?,
+            wasRestored: Boolean
+        ) {
+            if (!wasRestored) {
+                player?.cueVideo(TJU2b5oh7bI)
+            }
         }
 
+        override fun onInitializationFailure(
+            provider: YouTubePlayer.Provider?,
+            errorReason: YouTubeInitializationResult?
+        ) {
+            if (errorReason?.isUserRecoverableError == true) {
+                errorReason.getErrorDialog(this, 1)?.show()
+            } else {
+                Toast.makeText(this, "Error initializing YouTube player", Toast.LENGTH_LONG).show()
+            }
 
 
-
+        }
     }
 }

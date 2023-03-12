@@ -7,6 +7,16 @@
     tools:context=".DashboardActivity">
 
 
+
+    <com.google.android.youtube.player.YouTubePlayerView
+        android:id="@+id/youtube_player"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingClass" />
+
+
+
+
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
