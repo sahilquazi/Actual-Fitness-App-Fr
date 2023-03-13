@@ -51,6 +51,7 @@ class DashboardActivity : AppCompatActivity() {
             } else {
                 updateLastLoginDate(today)
                 resetDays()
+                sendNotification()
             }
         }
     }
