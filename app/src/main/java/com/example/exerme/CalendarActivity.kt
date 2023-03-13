@@ -9,6 +9,7 @@ import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.exerme.databinding.ActivityCalendarBinding
 import java.util.*
@@ -16,8 +17,6 @@ import java.util.*
 
 class CalendarActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCalendarBinding
-    private val channelID = "1"
-    private val notificationId = 1
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCalendarBinding.inflate(layoutInflater)
@@ -32,6 +31,7 @@ class CalendarActivity : AppCompatActivity() {
 
         binding.btnNotification.setOnClickListener {
             sendNotification()
+            Toast.makeText(this, "Reminder has been set", Toast.LENGTH_SHORT).show()
         }
 
         if (supportActionBar != null) {
@@ -42,10 +42,10 @@ class CalendarActivity : AppCompatActivity() {
 
     private fun createNotificationChannel() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            val channelName = "Notification Channel"
-            val channelDesc = "Description"
+            val channelName = "Notification"
+            val channelDesc = "Schedules reminders at a specific time to work out"
             val importance = NotificationManager.IMPORTANCE_DEFAULT
-            val channel = NotificationChannel(channelID, channelName, importance).apply {
+            val channel = NotificationChannel(Notification.channelID, channelName, importance).apply {
                 description = channelDesc
             }
 
@@ -68,7 +68,7 @@ class CalendarActivity : AppCompatActivity() {
 
     private fun sendNotification() {
         val intent = Intent(this, Notification::class.java)
-        val pendingIntent = PendingIntent.getBroadcast(this, notificationId, intent, PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT)
+        val pendingIntent = PendingIntent.getBroadcast(this, Notification.notificationId, intent, PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT)
 
         val alarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
         val time = getDate()
