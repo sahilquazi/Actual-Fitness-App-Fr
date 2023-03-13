@@ -1,5 +1,6 @@
 package com.example.exerme
 
+import android.annotation.SuppressLint
 import android.app.PendingIntent
 import android.content.BroadcastReceiver
 import android.content.Context
@@ -11,6 +12,7 @@ class Notification : BroadcastReceiver() {
     private val channelID = "1"
     private val notificationId = 1
 
+    @SuppressLint("MissingPermission")
     override fun onReceive(context: Context, intent: Intent?) {
         val intent = Intent(context, DashboardActivity::class.java).apply {
             flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
