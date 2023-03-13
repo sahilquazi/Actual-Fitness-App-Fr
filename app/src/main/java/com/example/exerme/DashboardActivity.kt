@@ -71,21 +71,21 @@ class DashboardActivity : AppCompatActivity() {
 
     private fun getConsecutiveDays(): Int {
         var days = 0
-        days = sharedPreferences.getInt("num_consecutive_days", 0)
+        days = sharedPreferences.getInt("consecutive_days", 0)
         return days
     }
 
     private fun addDays() {
         val days = getConsecutiveDays() + 1
         val editor = sharedPreferences.edit()
-        editor.putInt("num_consecutive_days", days)
+        editor.putInt("consecutive_days", days)
         editor.apply()
     }
 
     private fun resetDays() {
         val days = 1
         val editor = sharedPreferences.edit()
-        editor.putInt("num_consecutive_days", days)
+        editor.putInt("consecutive_days", days)
         editor.apply()
     }
 
