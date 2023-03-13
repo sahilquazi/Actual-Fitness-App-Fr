@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 
 
 public class DashboardActivity : AppCompatActivity() {
+YouTubePlayer.onInitializedListener
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
