@@ -117,7 +117,7 @@ class DashboardActivity : AppCompatActivity() {
         val streakNotification = NotificationCompat.Builder(this, channelID2)
             .setSmallIcon(R.drawable.notification_icon)
             .setContentTitle("Exerme")
-            .setContentText("Your streak is ${streak()} days")
+            .setContentText("Your streak is ${streak()}")
             .setContentIntent(pendingIntent)
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
             .build()
