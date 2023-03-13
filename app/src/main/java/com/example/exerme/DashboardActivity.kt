@@ -96,7 +96,7 @@ class DashboardActivity : AppCompatActivity() {
     private fun createNotificationChannel() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val channelName = "Streak Notification"
-            val channelDesc = "Send notification that updates every day if the user works out"
+            val channelDesc = "Send notification that updates every day when the user opens the app"
             val importance = NotificationManager.IMPORTANCE_DEFAULT
             val channel = NotificationChannel(channelID2, channelName, importance).apply {
                 description = channelDesc
