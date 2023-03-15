@@ -7,11 +7,10 @@
     <string name="signup">Sign Up</string>
     <string name="btnNotification">Set Reminder</string>
     <string name="Welcome">Welcome To Exerme!</string>
-    <string name="DoesWorkout">Rate your experience at workouts</string>
-    <string name="NewWorkout">Low</string>
-    <string name="VetWorkout">High</string>
-    <string name="LengthOfExercise">How long can you workout?</string>
-    <string name="FrequencyOfExercise">How many times a week do you want to workout out?</string>
+    <string name="Easy_workout">Easy</string>
+    <string name="Medium_workout">Medium</string>
+    <string name="Hard_workout">Hard</string>
+    <string name="intensity">What level of workout would you like?</string>
     <string name="set_reminder">Set Reminder</string>
     <string name="Workout_Video1">WorkOut Video 1</string>
     <string name="Workout_Video2">WorkOut Video 2</string>
