@@ -70,7 +70,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="36dp"
                 android:background="#6CFF6E"
-                android:text="@string/FrequencyOfExercise"
+                android:text="@string/intensity"
                 android:textColor="#0E0E0D"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -78,57 +78,29 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/surveyQuestion2" />
 
-            <SeekBar
-                android:id="@+id/surveyQuestion2"
+            <com.google.android.material.chip.ChipGroup
                 android:layout_width="match_parent"
-                android:layout_height="35dp"
-                app:layout_constraintEnd_toEndOf="@+id/surveyQuestionWorkoutLength"
-                app:layout_constraintStart_toStartOf="@+id/surveyQuestionWorkoutLength"
-                app:layout_constraintTop_toBottomOf="@+id/surveyQuestionWorkoutLength" />
+                android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/surveyQuestionWorkoutLVL2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="48dp"
-                android:background="#6CFF6E"
-                android:text="@string/DoesWorkout"
-                android:textColor="#0E0E0D"
-                android:textSize="25sp"
-                app:layout_constraintEnd_toEndOf="@+id/edtTextEmail"
-                app:layout_constraintHorizontal_bias="0.497"
-                app:layout_constraintStart_toStartOf="@+id/edtTextEmail"
-                app:layout_constraintTop_toBottomOf="@+id/edtTextEmail" />
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/EasyChip"
+                    android:text="@string/Easy_workout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
 
-            <SeekBar
-                android:id="@+id/surveyQuestion4"
-                android:layout_width="match_parent"
-                android:layout_height="35dp"
-                android:layout_marginTop="24dp"
-                app:layout_constraintEnd_toEndOf="@+id/SurveyQuestionWorkoutLVL"
-                app:layout_constraintStart_toStartOf="@+id/SurveyQuestionWorkoutLVL"
-                app:layout_constraintTop_toBottomOf="@+id/SurveyQuestionWorkoutLVL" />
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/MediumChip"
+                    android:text="@string/Medium_workout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
 
-            <TextView
-                android:id="@+id/surveyQuestionWorkoutLength4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
-                android:background="#6CFF6E"
-                android:text="@string/LengthOfExercise"
-                android:textColor="#0E0E0D"
-                android:textSize="25sp"
-                app:layout_constraintEnd_toEndOf="@+id/SurveyQuestion1"
-                app:layout_constraintStart_toStartOf="@+id/SurveyQuestion1"
-                app:layout_constraintTop_toBottomOf="@+id/SurveyQuestion1" />
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/HardChip"
+                    android:text="@string/Hard_workout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
 
-            <SeekBar
-                android:id="@+id/surveyQuestion6"
-                android:layout_width="match_parent"
-                android:layout_height="35dp"
-                app:layout_constraintEnd_toEndOf="@+id/SurveyQuestionWorkoutLength"
-                app:layout_constraintStart_toStartOf="@+id/SurveyQuestionWorkoutLength"
-                app:layout_constraintTop_toBottomOf="@+id/SurveyQuestionWorkoutLength" />
+            </com.google.android.material.chip.ChipGroup>
 
         </LinearLayout>
     </ScrollView>
