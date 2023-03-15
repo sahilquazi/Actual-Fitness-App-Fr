@@ -4,41 +4,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#e0d6cc"
+    app:circularflow_radiusInDP="0"
     tools:context=".CalendarActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#B6977D"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/calendar_toolbar"
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/btnQuiz"
+            android:layout_width="325dp"
             android:layout_height="wrap_content"
-            android:background="?attr/colorPrimary"
-            android:minHeight="?attr/actionBarSize"
-            android:theme="?attr/actionBarTheme" />
+            android:text="@string/btnBack"
+            android:textColorHighlight="#B6977D"
+            android:textColorHint="#B6977D"
+            android:textColorLink="#B6977D"
+            android:theme="@style/Theme.Exerme"
+            app:iconTint="#B6977D" />
 
     </com.google.android.material.appbar.AppBarLayout>
-
-    <Button
-        android:id="@+id/btnQuiz"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btnBack"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.102"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
 
     <Button
         android:id="@+id/btnNotification"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#B6977D"
         android:text="@string/btnNotification"
+        app:circularflow_radiusInDP="60"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -49,6 +47,7 @@
         android:id="@+id/datePicker"
         android:layout_width="238dp"
         android:layout_height="156dp"
+        android:background="#B6977D"
         android:calendarViewShown="false"
         android:datePickerMode="spinner"
         android:scaleX="0.9"
@@ -62,24 +61,34 @@
         android:id="@+id/timePicker"
         android:layout_width="238dp"
         android:layout_height="156dp"
+        android:background="#B6977D"
+        android:calendarViewShown="false"
         android:scaleX="0.9"
         android:scaleY="0.9"
-        android:calendarViewShown="false"
         android:timePickerMode="spinner"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/datePicker" />
+        app:layout_constraintTop_toBottomOf="@+id/datePicker"
+        android:bottomLeftRadius="8dp"
+        android:topRightRadius="8dp"
+        android:topLeftRadius="8dp"/>
 
     <CalendarView
         android:id="@+id/calendarView"
         android:layout_width="330dp"
         android:layout_height="285dp"
+        android:background="#B6977D"
         android:scaleX="0.9"
         android:scaleY="0.9"
+        app:circularflow_radiusInDP="32"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnQuiz" />
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+        android:bottomLeftRadius="8dp"
+        android:topRightRadius="8dp"
+        android:topLeftRadius="8dp"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

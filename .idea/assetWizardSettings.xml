@@ -79,7 +79,8 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="imagePath" value="$USER_HOME$/Downloads/My_project-1.PNG" />
+                                                <entry key="imagePath" value="$USER_HOME$/Downloads/image.PNG" />
+                                                <entry key="scalingPercent" value="119" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -107,6 +108,11 @@
                                           </PersistentState>
                                         </value>
                                       </entry>
+                                    </map>
+                                  </option>
+                                  <option name="values">
+                                    <map>
+                                      <entry key="outputName" value="ic_launcher_background" />
                                     </map>
                                   </option>
                                 </PersistentState>
