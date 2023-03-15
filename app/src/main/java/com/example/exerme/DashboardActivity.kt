@@ -10,6 +10,7 @@ import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.MediaController
 import android.widget.VideoView
 import androidx.appcompat.app.AppCompatActivity
@@ -28,6 +29,14 @@ class DashboardActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dashboard)
+
+        val fiveminButton = findViewById<ImageButton>(R.id.image_button_1)
+        fiveminButton.setOnClickListener {
+            val intent = Intent(this, Video_Activity1::class.java)
+            startActivity(intent)
+        }
+
+
         createNotificationChannel()
 
         val buttonCalendar = findViewById<Button>(R.id.calendarButton)
