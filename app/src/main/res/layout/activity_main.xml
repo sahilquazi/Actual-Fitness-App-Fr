@@ -24,7 +24,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:background="#FAF5F5"
-                android:backgroundTint="#454545"
+                android:backgroundTint="#FFC8A569"
                 android:text="@string/Welcome"
                 android:textColor="#000000"
                 android:textSize="40sp"

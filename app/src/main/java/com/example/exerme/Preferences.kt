@@ -20,13 +20,12 @@ class Preferences : AppCompatActivity() {
         binding = ActivityPreferencesBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.EasyChip.setOnClickListener {
-            Toast.makeText(
-                this,
-                binding.EasyChip.text,
-                Toast.LENGTH_SHORT
-            ).show()
+        val buttonDashboard = findViewById<Button>(R.id.GotoDashboardButton)
+        buttonDashboard.setOnClickListener{
+            val intent = Intent(this, DashboardActivity::class.java)
+            startActivity(intent)
         }
+
 
         choiceChip()
     }
@@ -42,5 +41,6 @@ class Preferences : AppCompatActivity() {
                     ).show()
                 }
             }
+
     }
 }

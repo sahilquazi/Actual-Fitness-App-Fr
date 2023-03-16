@@ -24,7 +24,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="imagePath" value="/private/var/folders/wf/03mwr5m52tsgpb3xsz4_4_680000gn/T/ic_android_black_24dp.xml" />
+                                                <entry key="imagePath" value="C:\Users\alexh\AppData\Local\Temp\ic_android_black_24dp.xml" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -67,7 +67,7 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="imagePath" value="/private/var/folders/wf/03mwr5m52tsgpb3xsz4_4_680000gn/T/ic_android_black_24dp.xml" />
+                                                <entry key="imagePath" value="C:\Users\alexh\AppData\Local\Temp\ic_android_black_24dp.xml" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -79,7 +79,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="imagePath" value="$USER_HOME$/Downloads/My_project-1.PNG" />
+                                                <entry key="imagePath" value="C:\Users\alexh\Downloads\exerme heart.png" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -109,6 +109,12 @@
                                       </entry>
                                     </map>
                                   </option>
+                                  <option name="values">
+                                    <map>
+                                      <entry key="backgroundAssetType" value="COLOR" />
+                                      <entry key="backgroundColor" value="fdf3e7" />
+                                    </map>
+                                  </option>
                                 </PersistentState>
                               </value>
                             </entry>
@@ -123,7 +129,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="imagePath" value="/private/var/folders/wf/03mwr5m52tsgpb3xsz4_4_680000gn/T/ic_android_black_24dp.xml" />
+                                                <entry key="imagePath" value="C:\Users\alexh\AppData\Local\Temp\ic_android_black_24dp.xml" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -167,7 +173,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="imagePath" value="/private/var/folders/wf/03mwr5m52tsgpb3xsz4_4_680000gn/T/ic_android_black_24dp.xml" />
+                                                <entry key="imagePath" value="C:\Users\alexh\AppData\Local\Temp\ic_android_black_24dp.xml" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -231,7 +237,7 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="imagePath" value="/private/var/folders/wf/03mwr5m52tsgpb3xsz4_4_680000gn/T/ic_android_black_24dp.xml" />
+                                                <entry key="imagePath" value="C:\Users\alexh\AppData\Local\Temp\ic_android_black_24dp.xml" />
                                               </map>
                                             </option>
                                           </PersistentState>

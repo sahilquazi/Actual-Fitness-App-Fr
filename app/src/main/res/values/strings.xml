@@ -18,6 +18,9 @@
     <string name="three_times">Three Times</string>
     <string name="seven_times">Seven Times</string>
     <string name="set_reminder">Set Reminder</string>
+    <string name="GoToDashboard">Confirm Preferences</string>
+    <string name="GoToPreferences">Change Preferences</string>
+    <string name="GoToDashboard_from_video">Return To Dashboard</string>
     <string name="Workout_Video1">WorkOut Video 1</string>
     <string name="Workout_Video2">WorkOut Video 2</string>
     <string name="Workout_Video3">WorkOut Video 3</string>

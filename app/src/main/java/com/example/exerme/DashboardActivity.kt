@@ -44,6 +44,11 @@ class DashboardActivity : AppCompatActivity() {
             val intent = Intent(this, CalendarActivity::class.java)
             startActivity(intent)
         }
+        val buttonDashboard = findViewById<Button>(R.id.PrefButton)
+        buttonDashboard.setOnClickListener {
+            val intent = Intent(this, Preferences::class.java)
+            startActivity(intent)
+        }
 
         val dateFormat: DateFormat = SimpleDateFormat("MM-dd-yyyy", Locale.getDefault())
         val date = Date()
