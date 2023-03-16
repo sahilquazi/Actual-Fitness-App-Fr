@@ -19,7 +19,7 @@
             android:name=".Preferences"
             android:exported="false" />
         <activity
-            android:name=".Video_Activity1"
+            android:name=".VideoActivity"
             android:exported="false" />
 
         <receiver

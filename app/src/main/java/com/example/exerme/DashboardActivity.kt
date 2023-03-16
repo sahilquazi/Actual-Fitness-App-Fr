@@ -11,17 +11,32 @@ import android.os.Build
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
-import android.widget.MediaController
-import android.widget.VideoView
+import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
+import com.example.exerme.Preferences.Companion.difficultyMode
 import java.text.DateFormat
 import java.text.SimpleDateFormat
 import java.util.*
 
 
+private operator fun String.invoke(value: () -> Unit): String {
+    TODO("Not yet implemented")
+}
+
 class DashboardActivity : AppCompatActivity() {
+
+    companion object {
+
+
+        var buttonClicked = "Idk yet"
+
+
+    }
+
+
+
     private val channelID2 = "2"
     private val notificationId2 = 2
     private val sharedPreferences: SharedPreferences by lazy { applicationContext.getSharedPreferences("PREFERENCES2", MODE_PRIVATE) }
@@ -30,14 +45,69 @@ class DashboardActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dashboard)
 
-        val fiveminButton = findViewById<ImageButton>(R.id.image_button_1)
-        fiveminButton.setOnClickListener {
-            val intent = Intent(this, Video_Activity1::class.java)
-            startActivity(intent)
+        val imageButton1 = findViewById<ImageButton>(R.id.image_button_1)
+        imageButton1.setOnClickListener({
+            run {
+                val intent = Intent(this, VideoActivity::class.java)
+                startActivity(intent)
+                buttonClicked =
+                    "five_min_" + $ / com.example.exerme.Preferences.Companion.difficultyMode + "_vid"
+                setContentView(R.layout.activity_video1)
+            }
+        }
+
+        val imageButton2 = findViewById<ImageButton>(R.id.image_button_2)
+        imageButton2.setOnClickListener {
+            run {
+                val intent = Intent(this, VideoActivity::class.java)
+                startActivity(intent)
+                buttonClicked =
+                    "ten_min_" + $ / com.example.exerme.Preferences.Companion.difficultyMode + "_vid"
+                setContentView(R.layout.activity_video1)
+            }
+        }
+        val imageButton3 = findViewById<ImageButton>(R.id.image_button_3)
+        imageButton3.setOnClickListener {
+            run {
+                val intent = Intent(this, VideoActivity::class.java)
+                startActivity(intent)
+                buttonClicked =
+                    "fifteen_min_" + $ / com.example.exerme.Preferences.Companion.difficultyMode + "_vid"
+                setContentView(R.layout.activity_video1)
+            }
         }
 
 
+
+
+        if difficultyMode = "Easy" {
+              imageButton1.setImageResource(R.drawable.five_min_easy_img)
+              imageButton2.setImageResource(R.drawable.ten_min_easy_img)
+              imageButton3.setImageResource(R.drawable.fifteen_min_easy_img)
+          } else if difficultyMode = "Medium" {
+          imageButton1.setImageResource(R.drawable.five_min_medium_img)
+          imageButton2.setImageResource(R.drawable.ten_min_medium_img)
+          imageButton3.setImageResource(R.drawable.fifteen_min_medium_img)
+      } else if difficultyMode = "Hard" {
+          imageButton1.setImageResource(R.drawable.five_min_hard_img)
+          imageButton2.setImageResource(R.drawable.ten_min_hard_img)
+          imageButton3.setImageResource(R.drawable.fifteen_min_hard_img)
+      }
+
+
         createNotificationChannel()
+
+
+
+
+
+
+
+
+
+
+
+
 
         val buttonCalendar = findViewById<Button>(R.id.calendarButton)
         buttonCalendar.setOnClickListener {
@@ -79,6 +149,38 @@ class DashboardActivity : AppCompatActivity() {
         calendar.add(Calendar.DATE, -1)
         return simpleDateFormat.format(calendar.time)
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     private fun updateLastLoginDate(date: String) {
         val editor = sharedPreferences.edit()
