@@ -27,7 +27,7 @@
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/GoToDashboard"
+        android:text="@string/GoToDashboard_from_video"
         android:translationY="685dp" />
 
 </RelativeLayout>
