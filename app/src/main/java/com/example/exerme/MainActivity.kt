@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         val nameQuiz = findViewById<TextView>(R.id.edtTextName)
         val emailQuiz = findViewById<TextView>(R.id.edtTextEmail)
         val buttonQuiz = findViewById<Button>(R.id.signUpButton)
-        val intent = Intent(this, DashboardActivity::class.java)
+        val intent = Intent(this, Preferences::class.java)
 
         val preferences = getSharedPreferences("PREFERENCES", 0)
 

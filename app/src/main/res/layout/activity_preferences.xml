@@ -15,22 +15,26 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/surveyQuestionWorkoutLength2"
-        app:layout_constraintVertical_bias="0.01">
+        app:layout_constraintVertical_bias="0.01"
+        app:singleSelection="true">
 
         <com.google.android.material.chip.Chip
             android:id="@+id/EasyChip"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/Easy_workout" />
 
         <com.google.android.material.chip.Chip
             android:id="@+id/MediumChip"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/Medium_workout" />
 
         <com.google.android.material.chip.Chip
             android:id="@+id/HardChip"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/Hard_workout" />
@@ -72,22 +76,26 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/surveyQuestionWorkoutFrequency">
+        app:layout_constraintTop_toBottomOf="@+id/surveyQuestionWorkoutFrequency"
+        app:singleSelection="true">
 
         <com.google.android.material.chip.Chip
             android:id="@+id/OneTimeChip"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/one_time" />
 
         <com.google.android.material.chip.Chip
             android:id="@+id/ThreeTimeChip"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/three_times" />
 
         <com.google.android.material.chip.Chip
             android:id="@+id/SevenTimeChip"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/seven_times" />
