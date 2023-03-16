@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Exerme</string>
+    <string name="Username">Username</string>
+    <string name="Email">Email</string>
     <string name="button_text1">Quiz</string>
     <string name="button_text2">Progress Checker</string>
     <string name="textview">TextView</string>
@@ -11,6 +13,10 @@
     <string name="Medium_workout">Medium</string>
     <string name="Hard_workout">Hard</string>
     <string name="intensity">What level of workout would you like?</string>
+    <string name="frequency">How many times a week do you want to workout?</string>
+    <string name="one_time">One Time</string>
+    <string name="three_times">Three Times</string>
+    <string name="seven_times">Seven Times</string>
     <string name="set_reminder">Set Reminder</string>
     <string name="Workout_Video1">WorkOut Video 1</string>
     <string name="Workout_Video2">WorkOut Video 2</string>

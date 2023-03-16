@@ -9,35 +9,9 @@ import android.widget.Toast
 import com.example.exerme.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-
-    private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-
-
-        binding.EasyChip.setOnClickListener {
-            Toast.makeText(this,
-                    binding.EasyChip.text,
-                    Toast.LENGTH_SHORT
-            ).show()
-        }
-        binding.MediumChip.setOnClickListener {
-            Toast.makeText(this,
-                binding.MediumChip.text,
-                Toast.LENGTH_SHORT
-            ).show()
-        }
-        binding.HardChip.setOnClickListener {
-            Toast.makeText(this,
-                binding.HardChip.text,
-                Toast.LENGTH_SHORT
-            ).show()
-        }
-
-
-
+        setContentView(R.layout.activity_main)
 
         val nameQuiz = findViewById<TextView>(R.id.edtTextName)
         val emailQuiz = findViewById<TextView>(R.id.edtTextEmail)

@@ -40,7 +40,7 @@
                 android:layout_marginTop="24dp"
                 android:autofillHints=""
                 android:ems="10"
-                android:hint="Username"
+                android:hint="@string/Username"
                 android:inputType="textPersonName"
                 app:layout_constraintEnd_toEndOf="@+id/Welcome"
                 app:layout_constraintHorizontal_bias="0.478"
@@ -56,51 +56,13 @@
                 android:layout_marginTop="12dp"
                 android:autofillHints=""
                 android:ems="10"
-                android:hint="Email"
+                android:hint="@string/Email"
                 android:inputType="textEmailAddress"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/edtTextName"
                 tools:ignore="LabelFor"
                 tools:text="Email" />
-
-            <TextView
-                android:id="@+id/surveyQuestionWorkoutLength"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="36dp"
-                android:background="#6CFF6E"
-                android:text="@string/intensity"
-                android:textColor="#0E0E0D"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/surveyQuestion2" />
-
-            <com.google.android.material.chip.ChipGroup
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/EasyChip"
-                    android:text="@string/Easy_workout"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/MediumChip"
-                    android:text="@string/Medium_workout"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/HardChip"
-                    android:text="@string/Hard_workout"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-
-            </com.google.android.material.chip.ChipGroup>
 
         </LinearLayout>
     </ScrollView>
