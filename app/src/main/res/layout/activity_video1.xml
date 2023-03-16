@@ -28,6 +28,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/GoToDashboard_from_video"
-        android:translationY="685dp" />
+        android:translationY="600dp" />
 
 </RelativeLayout>
