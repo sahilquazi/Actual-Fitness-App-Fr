@@ -24,7 +24,7 @@
         android:translationY="40dp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/ReturnToDashboard"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/GoToDashboard_from_video"
