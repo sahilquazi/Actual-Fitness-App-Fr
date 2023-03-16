@@ -3,7 +3,7 @@
     <string name="Username">Username</string>
     <string name="Email">Email</string>
     <string name="button_text1">Quiz</string>
-    <string name="button_text2">Progress Checker</string>
+    <string name="button_text2">Send Notifications</string>
     <string name="textview">TextView</string>
     <string name="btnBack">Return To Home</string>
     <string name="signup">Sign Up</string>
@@ -27,5 +27,7 @@
     <string name="Workout_Video4">WorkOut Video 4</string>
     <string name="Workout_Video5">WorkOut Video 5</string>
     <string name="Workout_Video6">WorkOut Video 6</string>
+    <string name="streakButtonText">Streak Log</string>
+    <string name="textStreak">Your streak is:</string>
 
 </resources>
