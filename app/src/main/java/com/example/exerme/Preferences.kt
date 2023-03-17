@@ -20,11 +20,6 @@ class Preferences : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val finishPreferences = findViewById<Button>(R.id.GotoDashboardButton)
-        finishPreferences.setOnClickListener {
-            val intent = Intent(this, DashboardActivity::class.java)
-            startActivity(intent)
-        }
 
 
         binding = ActivityPreferencesBinding.inflate(layoutInflater)
@@ -79,5 +74,10 @@ class Preferences : AppCompatActivity() {
                     ).show()
                 }
             }
+        val finishPreferences = findViewById<Button>(R.id.GotoDashboardButton)
+        finishPreferences.setOnClickListener {
+            val intent = Intent(this, DashboardActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
