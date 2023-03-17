@@ -76,7 +76,9 @@ class DashboardActivity : AppCompatActivity() {
         }
 
 
-
+        val buttonee = findViewById<ImageButton>(R.id.image_button_1)
+        val buttontwoo = findViewById<ImageButton>(R.id.imageButton2)
+        val buttonthree = findViewById<ImageButton>(R.id.imageButton3)
 
         if (difficultyMode == "easy") {
                 imageButton1.setImageResource(R.drawable.five_min_easy_img)
