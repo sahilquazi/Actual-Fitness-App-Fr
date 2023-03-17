@@ -103,13 +103,13 @@
 
     <Button
         android:id="@+id/GotoDashboardButton"
-        android:layout_width="405dp"
-        android:layout_height="49dp"
+        android:layout_width="409dp"
+        android:layout_height="58dp"
         android:layout_marginBottom="4dp"
         android:text="@string/GoToDashboard"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         tools:text="@string/GoToDashboard" />
 </androidx.constraintlayout.widget.ConstraintLayout>
