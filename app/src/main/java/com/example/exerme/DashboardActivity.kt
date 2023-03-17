@@ -43,7 +43,28 @@ class DashboardActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dashboard)
 
+
         val imageButton1 = findViewById<ImageButton>(R.id.image_button_1)
+        val imageButton2 = findViewById<ImageButton>(R.id.imageButton2)
+        val imageButton3 = findViewById<ImageButton>(R.id.imageButton3)
+
+        if (difficultyMode == "easy") {
+            imageButton1.setImageResource(R.drawable.five_min_easy_img)
+            imageButton2.setImageResource(R.drawable.ten_min_easy_img)
+            imageButton3.setImageResource(R.drawable.fifteen_min_easy_img)
+        } else if (difficultyMode == "medium") {
+            imageButton1.setImageResource(R.drawable.five_min_medium_img)
+            imageButton2.setImageResource(R.drawable.ten_min_medium_img)
+            imageButton3.setImageResource(R.drawable.fifteen_min_medium_img)
+        } else if (difficultyMode == "hard") {
+            imageButton1.setImageResource(R.drawable.five_min_hard_img)
+            imageButton2.setImageResource(R.drawable.ten_min_hard_img)
+            imageButton3.setImageResource(R.drawable.fifteen_min_hard_img)
+        }
+
+
+
+
         imageButton1.setOnClickListener {
             run {
                 val intent = Intent(this, VideoActivity::class.java)
@@ -54,7 +75,6 @@ class DashboardActivity : AppCompatActivity() {
             }
         }
 
-       val imageButton2 = findViewById<ImageButton>(R.id.imageButton2)
         imageButton2.setOnClickListener {
             run {
                 val intent = Intent(this, VideoActivity::class.java)
@@ -64,7 +84,6 @@ class DashboardActivity : AppCompatActivity() {
                 setContentView(R.layout.activity_video1)
             }
         }
-        val imageButton3 = findViewById<ImageButton>(R.id.imageButton3)
         imageButton3.setOnClickListener {
             run {
                 val intent = Intent(this, VideoActivity::class.java)
@@ -75,24 +94,6 @@ class DashboardActivity : AppCompatActivity() {
             }
         }
 
-
-        val buttonee = findViewById<ImageButton>(R.id.image_button_1)
-        val buttontwoo = findViewById<ImageButton>(R.id.imageButton2)
-        val buttonthree = findViewById<ImageButton>(R.id.imageButton3)
-
-        if (difficultyMode == "easy") {
-                imageButton1.setImageResource(R.drawable.five_min_easy_img)
-                imageButton2.setImageResource(R.drawable.ten_min_easy_img)
-                imageButton3.setImageResource(R.drawable.fifteen_min_easy_img)
-            } else if (difficultyMode == "medium") {
-          imageButton1.setImageResource(R.drawable.five_min_medium_img)
-          imageButton2.setImageResource(R.drawable.ten_min_medium_img)
-          imageButton3.setImageResource(R.drawable.fifteen_min_medium_img)
-      } else if (difficultyMode == "hard") {
-          imageButton1.setImageResource(R.drawable.five_min_hard_img)
-          imageButton2.setImageResource(R.drawable.ten_min_hard_img)
-          imageButton3.setImageResource(R.drawable.fifteen_min_hard_img)
-      }
 
 
         createNotificationChannel()
