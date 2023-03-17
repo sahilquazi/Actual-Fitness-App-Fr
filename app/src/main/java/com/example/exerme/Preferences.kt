@@ -63,11 +63,7 @@ class Preferences : AppCompatActivity() {
         choiceChip()
     }
 
-        val Finish_Preferences = findViewById<Button>(R.id.GotoDashboardButton)
-        Finish_Preferences.setOnClickListener {
-            val intent = Intent(this, DashboardActivity::class.java)
-            startActivity(intent)
-        }
+
 
 
 
