@@ -66,12 +66,10 @@ class DashboardActivity : AppCompatActivity() {
 
 
 
-
         imageButton1.setOnClickListener {
             val intent = Intent(this, VideoActivity::class.java)
                 startActivity(intent)
-                com.example.exerme.DashboardActivity.Companion.buttonClicked =
-                    "five_min_${difficultyMode}_vid"
+             buttonClicked = ("five_min_${difficultyMode}_vid")
                 setContentView(R.layout.activity_video1)
         }
 
@@ -79,16 +77,16 @@ class DashboardActivity : AppCompatActivity() {
 
                 val intent = Intent(this, VideoActivity::class.java)
                 startActivity(intent)
-                com.example.exerme.DashboardActivity.Companion.buttonClicked =
-                    "ten_min_${difficultyMode}_vid"
+      buttonClicked = ("ten_min_${difficultyMode}_vid")
+            buttonClicked = ("ten_min_${difficultyMode}_vid")
                 setContentView(R.layout.activity_video1)
         }
         imageButton3.setOnClickListener {
 
                 val intent = Intent(this, VideoActivity::class.java)
                 startActivity(intent)
-                buttonClicked =
-                    "fifteen_min_${difficultyMode}_vid"
+                buttonClicked = "fifteen_min_${difficultyMode}_vid"
+            buttonClicked = ("fifteen_min_${difficultyMode}_vid")
                 setContentView(R.layout.activity_video1)
         }
 
