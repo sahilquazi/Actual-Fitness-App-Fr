@@ -29,5 +29,6 @@
     <string name="Workout_Video6">WorkOut Video 6</string>
     <string name="streakButtonText">Streak Log</string>
     <string name="textStreak">Your streak is:</string>
+    <string name="textBunny">Good job! Keep up the great work!</string>
 
 </resources>

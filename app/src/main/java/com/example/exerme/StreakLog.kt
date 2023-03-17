@@ -1,8 +1,10 @@
 package com.example.exerme
 
+import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import java.text.DateFormat
 import java.text.SimpleDateFormat
@@ -14,8 +16,24 @@ class StreakLog : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_streak)
 
-        val streakText = findViewById<TextView>(R.id.streakText)
-        streakText.text = streak().toString()
+        val backButton = findViewById<Button>(R.id.backButtonStreak)
+        backButton.setOnClickListener {
+            val intent = Intent(this, DashboardActivity::class.java)
+            startActivity(intent)
+        }
+
+        val streakNumber = findViewById<TextView>(R.id.streakNumber)
+        streakNumber.text = streak().toString()
+
+        val bunnyText = findViewById<TextView>(R.id.bunnyText)
+
+        if (streak() == 1) {
+            bunnyText.text = "Keep going! You got this!"
+        }
+
+        if (streak() >= 10) {
+            bunnyText.text = "Yay! Excellent work!"
+        }
 
         val dateFormat: DateFormat = SimpleDateFormat("MM-dd-yyyy", Locale.getDefault())
         val date = Date()

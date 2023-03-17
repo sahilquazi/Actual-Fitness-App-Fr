@@ -25,7 +25,9 @@
         <receiver
             android:name=".Notification"
             android:enabled="true" />
-
+        <activity
+            android:name=".StreakLog"
+            android:exported="false" />
         <activity
             android:name=".DashboardActivity"
             android:exported="false" />
