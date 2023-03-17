@@ -23,6 +23,8 @@ import java.util.*
 
 class DashboardActivity : AppCompatActivity() {
 
+
+
     companion object {
 
 
@@ -31,13 +33,15 @@ class DashboardActivity : AppCompatActivity() {
 
     }
 
-
-
     private val channelID2 = "2"
     private val notificationId2 = 2
     private val sharedPreferences: SharedPreferences by lazy { applicationContext.getSharedPreferences("PREFERENCES2", MODE_PRIVATE) }
 
+    @SuppressLint("SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
+
+
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dashboard)
 
@@ -67,7 +71,7 @@ class DashboardActivity : AppCompatActivity() {
             val intent = Intent(this, VideoActivity::class.java)
                 startActivity(intent)
                 com.example.exerme.DashboardActivity.Companion.buttonClicked =
-                    "five_min_" + "$difficultyMode" + "_vid"
+                    "five_min_" + difficultyMode + "_vid"
                 setContentView(R.layout.activity_video1)
         }
 
@@ -76,7 +80,7 @@ class DashboardActivity : AppCompatActivity() {
                 val intent = Intent(this, VideoActivity::class.java)
                 startActivity(intent)
                 com.example.exerme.DashboardActivity.Companion.buttonClicked =
-                    "ten_min_" + "$difficultyMode" + "_vid"
+                    "ten_min_" + difficultyMode + "_vid"
                 setContentView(R.layout.activity_video1)
         }
         imageButton3.setOnClickListener {
@@ -84,7 +88,7 @@ class DashboardActivity : AppCompatActivity() {
                 val intent = Intent(this, VideoActivity::class.java)
                 startActivity(intent)
                 buttonClicked =
-                    "fifteen_min_" + "$difficultyMode" + "_vid"
+                    "fifteen_min_" + difficultyMode + "_vid"
                 setContentView(R.layout.activity_video1)
         }
 
