@@ -1,6 +1,8 @@
 package com.example.exerme
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.exerme.databinding.ActivityPreferencesBinding
@@ -18,7 +20,11 @@ class Preferences : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-
+        val finishPreferences = findViewById<Button>(R.id.GotoDashboardButton)
+        finishPreferences.setOnClickListener {
+            val intent = Intent(this, DashboardActivity::class.java)
+            startActivity(intent)
+        }
 
 
         binding = ActivityPreferencesBinding.inflate(layoutInflater)
@@ -51,7 +57,7 @@ class Preferences : AppCompatActivity() {
                 binding.HardChip.text,
                 Toast.LENGTH_SHORT
             ).show()
-            Preferences.difficultyMode = "hard"
+            difficultyMode = "hard"
         }
 
         choiceChip()
