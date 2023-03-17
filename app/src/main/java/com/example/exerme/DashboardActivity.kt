@@ -6,7 +6,6 @@ import android.app.NotificationManager
 import android.app.PendingIntent
 import android.content.Intent
 import android.content.SharedPreferences
-import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.widget.Button
@@ -29,7 +28,7 @@ class DashboardActivity : AppCompatActivity() {
     companion object {
 
 
-        var buttonClicked: CharSequence = "Idk yet"
+        var buttonClicked = "Idk yet"
 
 
     }
@@ -50,7 +49,7 @@ class DashboardActivity : AppCompatActivity() {
                 val intent = Intent(this, VideoActivity::class.java)
                 startActivity(intent)
                 com.example.exerme.DashboardActivity.Companion.buttonClicked =
-                    "five_min_" + "$/com.example.exerme.Preferences.Companion.difficultyMode" + "_vid"
+                    "five_min_" + "$difficultyMode" + "_vid"
                 setContentView(R.layout.activity_video1)
             }
         }
@@ -61,7 +60,7 @@ class DashboardActivity : AppCompatActivity() {
                 val intent = Intent(this, VideoActivity::class.java)
                 startActivity(intent)
                 com.example.exerme.DashboardActivity.Companion.buttonClicked =
-                    "ten_min_" + "$/com.example.exerme.Preferences.Companion.difficultyMode" + "_vid"
+                    "ten_min_" + "$difficultyMode" + "_vid"
                 setContentView(R.layout.activity_video1)
             }
         }
@@ -71,7 +70,7 @@ class DashboardActivity : AppCompatActivity() {
                 val intent = Intent(this, VideoActivity::class.java)
                 startActivity(intent)
                 buttonClicked =
-                    "fifteen_min_" + "$/com.example.exerme.Preferences.Companion.difficultyMode" + "_vid"
+                    "fifteen_min_" + "$difficultyMode" + "_vid"
                 setContentView(R.layout.activity_video1)
             }
         }
@@ -79,15 +78,15 @@ class DashboardActivity : AppCompatActivity() {
 
 
 
-        if difficultyMode = "Easy" {
-              imageButton1.setImageResource(R.drawable.five_min_easy_img)
-              imageButton2.setImageResource(R.drawable.ten_min_easy_img)
-              imageButton3.setImageResource(R.drawable.fifteen_min_easy_img)
-          } else if difficultyMode = "Medium" {
+        if (difficultyMode == "easy") {
+                imageButton1.setImageResource(R.drawable.five_min_easy_img)
+                imageButton2.setImageResource(R.drawable.ten_min_easy_img)
+                imageButton3.setImageResource(R.drawable.fifteen_min_easy_img)
+            } else if (difficultyMode == "medium") {
           imageButton1.setImageResource(R.drawable.five_min_medium_img)
           imageButton2.setImageResource(R.drawable.ten_min_medium_img)
           imageButton3.setImageResource(R.drawable.fifteen_min_medium_img)
-      } else if difficultyMode = "Hard" {
+      } else if (difficultyMode == "hard") {
           imageButton1.setImageResource(R.drawable.five_min_hard_img)
           imageButton2.setImageResource(R.drawable.ten_min_hard_img)
           imageButton3.setImageResource(R.drawable.fifteen_min_hard_img)

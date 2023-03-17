@@ -8,7 +8,7 @@ import android.widget.MediaController
 import android.widget.VideoView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.exerme.DashboardActivity.Companion.buttonClicked
-import com.example.exerme.Preferences.Companion.difficultyMode
+
 
 
 class VideoActivity : AppCompatActivity() {
@@ -27,7 +27,7 @@ class VideoActivity : AppCompatActivity() {
         }
         videoView1 = findViewById(R.id.videoView1)
 
-        videoView1.setVideoURI(Uri.parse("android.resource://" + packageName + "/" + (R.raw.$/buttonClicked))
+        videoView1.setVideoURI(Uri.parse("android.resource://" + packageName + "/" + "${buttonClicked}"))
 
 
         val mediaController1 = MediaController(this)
