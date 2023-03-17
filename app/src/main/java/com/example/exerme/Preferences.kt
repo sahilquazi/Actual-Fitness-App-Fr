@@ -55,6 +55,11 @@ class Preferences : AppCompatActivity() {
             ).show()
             difficultyMode = "hard"
         }
+        val buttonGoBackToDash = findViewById<Button>(R.id.GotoDashboardButton)
+        buttonGoBackToDash.setOnClickListener {
+            setContentView(R.layout.activity_dashboard)
+        }
+
 
         choiceChip()
     }
