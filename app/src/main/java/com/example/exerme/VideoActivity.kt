@@ -27,7 +27,7 @@ class VideoActivity : AppCompatActivity() {
         }
         videoView1 = findViewById(R.id.videoView1)
 
-        videoView1.setVideoURI(Uri.parse("android.resource://" + packageName + "/" + R.raw.$/buttonClicked))
+        videoView1.setVideoURI(Uri.parse("android.resource://" + packageName + "/" + (R.raw.$/buttonClicked))
 
 
         val mediaController1 = MediaController(this)
