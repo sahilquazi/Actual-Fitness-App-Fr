@@ -46,9 +46,5 @@ class VideoActivity : AppCompatActivity() {
                 videoView1.start()
             }
         }
-
-
-
-
     }
 }
