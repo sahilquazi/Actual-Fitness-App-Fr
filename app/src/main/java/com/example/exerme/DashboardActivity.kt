@@ -19,9 +19,7 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 
-private operator fun String.invoke(value: () -> Unit): String {
-    TODO("Not yet implemented")
-}
+
 
 class DashboardActivity : AppCompatActivity() {
 
@@ -66,32 +64,28 @@ class DashboardActivity : AppCompatActivity() {
 
 
         imageButton1.setOnClickListener {
-            run {
-                val intent = Intent(this, VideoActivity::class.java)
+            val intent = Intent(this, VideoActivity::class.java)
                 startActivity(intent)
                 com.example.exerme.DashboardActivity.Companion.buttonClicked =
                     "five_min_" + "$difficultyMode" + "_vid"
                 setContentView(R.layout.activity_video1)
-            }
         }
 
         imageButton2.setOnClickListener {
-            run {
+
                 val intent = Intent(this, VideoActivity::class.java)
                 startActivity(intent)
                 com.example.exerme.DashboardActivity.Companion.buttonClicked =
                     "ten_min_" + "$difficultyMode" + "_vid"
                 setContentView(R.layout.activity_video1)
-            }
         }
         imageButton3.setOnClickListener {
-            run {
+
                 val intent = Intent(this, VideoActivity::class.java)
                 startActivity(intent)
                 buttonClicked =
                     "fifteen_min_" + "$difficultyMode" + "_vid"
                 setContentView(R.layout.activity_video1)
-            }
         }
 
 

@@ -31,7 +31,7 @@
 
                 <ImageButton
                     android:id="@+id/image_button_1"
-                    android:layout_width="177dp"
+                    android:layout_width="382dp"
                     android:layout_height="match_parent"
                     android:contentDescription="@string/Workout_Video1"
                     android:src="@drawable/five_min"
@@ -52,7 +52,7 @@
 
                 <ImageButton
                     android:id="@+id/imageButton2"
-                    android:layout_width="177dp"
+                    android:layout_width="385dp"
                     android:layout_height="match_parent"
                     android:contentDescription="@string/Workout_Video2"
                     tools:srcCompat="@tools:sample/avatars" />
@@ -71,7 +71,7 @@
 
                 <ImageButton
                     android:id="@+id/imageButton3"
-                    android:layout_width="177dp"
+                    android:layout_width="381dp"
                     android:layout_height="match_parent"
                     android:contentDescription="@string/Workout_Video3"
                     tools:srcCompat="@tools:sample/avatars" />

@@ -41,6 +41,7 @@ class Preferences : AppCompatActivity() {
                 binding.MediumChip.text,
                 Toast.LENGTH_SHORT
             ).show()
+
             difficultyMode = "medium"
         }
 
