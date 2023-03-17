@@ -95,7 +95,11 @@ class DashboardActivity : AppCompatActivity() {
         createNotificationChannel()
 
 
-
+        val buttonStreak = findViewById<Button>(R.id.streakButton)
+        buttonStreak.setOnClickListener {
+            val intent = Intent(this, StreakLog::class.java)
+            startActivity(intent)
+        }
 
 
 
